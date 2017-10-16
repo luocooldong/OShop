@@ -1,3 +1,4 @@
+import { AdminAuthGuard } from './admin-auth.guard';
 import { UserService } from './user.service';
 import { AuthGuard } from './auth.guard';
 import { AuthService } from './auth.service';
@@ -47,19 +48,28 @@ import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.componen
       { path: '', component: HomeComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'shopping-cart', component: ShoppingCartComponent },
-      { path: 'login', component:  LoginComponent },
+      { path: 'login', component: LoginComponent },
 
-      { path: 'check-out', component: CheckOutComponent , canActivate: [AuthGuard] },
+      { path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuard] },
       { path: 'order-success', component: OrderSuccessComponent, canActivate: [AuthGuard] },
-      { path: 'my/orders', component:  MyOrdersComponent, canActivate: [AuthGuard] },
+      { path: 'my/orders', component: MyOrdersComponent, canActivate: [AuthGuard] },
 
-      { path: 'admin/products', component:  AdminProductsComponent, canActivate: [AuthGuard] },
-      { path: 'admin/orders', component:  AdminOrdersComponent, canActivate: [AuthGuard] },
+      {
+        path: 'admin/products',
+        component: AdminProductsComponent,
+        canActivate: [AuthGuard, AdminAuthGuard ]
+      },
+      {
+        path: 'admin/orders',
+        component: AdminOrdersComponent,
+        canActivate: [AuthGuard, AdminAuthGuard ]
+      },
     ])
   ],
   providers: [
     AuthService,
     AuthGuard,
+    AdminAuthGuard,
     UserService
   ],
   bootstrap: [AppComponent]
