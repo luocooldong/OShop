@@ -30,18 +30,20 @@
     [sortable]="true"
     [resizable]="true"
     >
+    <ng-template #dataTableCell let-item="item">
+            {{ item.price | currency: 'USD': true }}
+    </ng-template>
   </data-table-column>
-  <ng-template #dataTableCell let-item="item">
-      {{ item.price | currency: 'USD': true }}
-  </ng-template>
+  
 
   <data-table-column
     [property]="'$key'"
     >
+    <ng-template #dataTableCell let-item="item">
+            <a [routerLink]="['/admin/products/', item.$key]">Eidt</a>
+    </ng-template>
   </data-table-column>
-  <ng-template #dataTableCell let-item="item">
-        <a [routerLink]="['/admin/products/', item.$key]">Eidt</a>
-  </ng-template>
+ 
 
 </data-table>
 
