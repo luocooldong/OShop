@@ -7,7 +7,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   templateUrl: './admin-products.component.html',
   styleUrls: ['./admin-products.component.css']
 })
-export class AdminProductsComponent implements OnInit, OnDestroy {
+export class AdminProductsComponent implements OnInit {
 
   products$;
   filteredProducts: any[];
@@ -32,10 +32,5 @@ export class AdminProductsComponent implements OnInit, OnDestroy {
   ngOnInit() {
   }
 
-  ngOnDestroy() {
-    // Called once, before the instance is destroyed.
-    // Add 'implements OnDestroy' to the class.
-    this.subscription.unsubscribe();
-  }
 
 }
