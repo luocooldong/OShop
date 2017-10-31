@@ -14,7 +14,7 @@
 <data-table
   [items]="items"
   [itemCount]="itemCount"
-  (reload)="reloadEvent($event)"
+  (reload)="reloadItems($event)"
   >
   <data-table-column
     [property]="'title'"
@@ -31,24 +31,21 @@
     [resizable]="true"
     >
   </data-table-column>
-  <ng-template #dataTableCell let-item=""product>
-      {{ product.price | currency: 'USD': true }}
+  <ng-template #dataTableCell let-item="item">
+      {{ item.price | currency: 'USD': true }}
   </ng-template>
 
   <data-table-column
-    [property]="'price'"
-    [header]="'Price'"
-    [sortable]="true"
-    [resizable]="true"
+    [property]="'$key'"
     >
   </data-table-column>
-  <ng-template #dataTableCell let-item=""product>
-      {{ product.price | currency: 'USD': true }}
+  <ng-template #dataTableCell let-item="item">
+        <a [routerLink]="['/admin/products/', item.$key]">Eidt</a>
   </ng-template>
-  
+
 </data-table>
 
-<table class="table">
+<!-- <table class="table">
     <thead>
         <tr>
             <th>Title</th>
@@ -61,8 +58,7 @@
             <td>{{ p.title }}</td>
             <td>{{ p.price }}</td>
             <td>
-                <a [routerLink]="['/admin/products/', p.$key]">Eidt</a>
             </td>
         </tr>
     </tbody>
-</table>
+</table> -->
