@@ -28,7 +28,6 @@ export class ProductsComponent  {
       })
       .subscribe(params => {
         this.category = params.get('category');
-        console.log(this.category);
         this.filteredProducts = (this.category) ?
           this.products.filter(p => p.category === this.category) :
           this.products;
