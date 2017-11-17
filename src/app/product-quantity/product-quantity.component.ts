@@ -13,7 +13,6 @@ export class ProductQuantityComponent {
   @Input('shopping-cart') shoppingCart;
   
   constructor(private cartService: ShoppingCartService) {
-    console.log(this.product);
   }
 
   addToCart() {
