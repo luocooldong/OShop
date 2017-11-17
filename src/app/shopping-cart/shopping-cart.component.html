@@ -20,7 +20,12 @@
           {{ item.product.title }}
         </td>
         <td>
-          {{ item.quantity }}
+          <!-- {{ item.quantity }} -->
+          <product-quantity 
+              [product]="item.product"
+              [shopping-cart]="cart"
+              >
+          </product-quantity>
         </td>
         <td>
           {{ item.totalPrice | currency:'USD': true }}
