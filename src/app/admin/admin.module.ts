@@ -12,10 +12,7 @@ import { AdminAuthGuard } from '../admin/services/admin-auth.guard';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
     SharedModule,
-    DataTableModule,
     RouterModule.forChild([
    
       {
