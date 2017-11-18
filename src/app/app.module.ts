@@ -1,3 +1,4 @@
+import { CoreModule } from './core/core.module';
 import { ShoppingModule } from './shopping/shopping.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -15,24 +16,23 @@ import { environment } from '../environments/environment';
 import { AdminModule } from './admin/admin.module';
 import { AdminAuthGuard } from './admin/services/admin-auth.guard';
 import { AppComponent } from './app.component';
-import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
+import { BsNavbarComponent } from './core/components/bs-navbar/bs-navbar.component';
+import { HomeComponent } from './core/components/home/home.component';
+import { LoginComponent } from './core/components/login/login.component';
 import { SharedModule } from './shared/shared.module';
 import { ProductsComponent } from './shopping/components/products/products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BsNavbarComponent,
-    HomeComponent,
-    LoginComponent,
+   
   ],
   imports: [
     BrowserModule,
     SharedModule,
     AdminModule,
     ShoppingModule,
+    CoreModule,
     CommonModule,
     FormsModule,
     CustomFormsModule,
