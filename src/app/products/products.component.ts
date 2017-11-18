@@ -1,12 +1,12 @@
 import { Subscription, Observable } from 'rxjs/Rx';
-import { ShoppingCartService } from '../shopping-cart.service';
-import { Product } from '../models/product';
+import { ShoppingCartService } from '../shared/services/shopping-cart.service';
+import { Product } from '../shared/models/product';
 import { ActivatedRoute } from '@angular/router';
-import { ProductService } from './../product.service';
+import { ProductService } from '../shared/services/product.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/switchMap';
-import { ShoppingCart } from '../models/shopping-cart';
+import { ShoppingCart } from '../shared/models/shopping-cart';
 
 
 @Component({

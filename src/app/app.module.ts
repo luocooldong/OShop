@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { ProductService } from './product.service';
-import { CategoryService } from './category.service';
-import { AdminAuthGuard } from './admin-auth.guard';
-import { UserService } from './user.service';
-import { AuthGuard } from './auth.guard';
-import { AuthService } from './auth.service';
+import { ProductService } from './shared/services/product.service';
+import { CategoryService } from './shared/services/category.service';
+import { AdminAuthGuard } from './shared/services/admin-auth.guard';
+import { UserService } from './shared/services/user.service';
+import { AuthGuard } from './shared/services/auth.guard';
+import { AuthService } from './shared/services/auth.service';
 import { environment } from '../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -31,10 +31,10 @@ import { AdminProductsComponent } from './admin/admin-products/admin-products.co
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
-import { ProductCardComponent } from './product-card/product-card.component';
-import { ShoppingCartService } from './shopping-cart.service';
-import { ProductQuantityComponent } from './product-quantity/product-quantity.component';
-import { OrderService } from './order.service';
+import { ProductCardComponent } from './shared/components/product-card/product-card.component';
+import { ShoppingCartService } from './shared/services/shopping-cart.service';
+import { ProductQuantityComponent } from './shared/components/product-quantity/product-quantity.component';
+import { OrderService } from './shared/services/order.service';
 import { ShoppingCartSummaryComponent } from './shopping-cart-summary/shopping-cart-summary.component';
 import { ShippingFormComponent } from './shipping-form/shipping-form.component';
 
