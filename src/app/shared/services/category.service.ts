@@ -14,6 +14,6 @@ export class CategoryService {
         orderByChild: 'name'
       }
     });
-}
+  }
 
 }

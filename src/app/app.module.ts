@@ -16,7 +16,6 @@ import { ShoppingModule } from './shopping/shopping.module';
 @NgModule({
   declarations: [
     AppComponent,
-   
   ],
   imports: [
     BrowserModule,
