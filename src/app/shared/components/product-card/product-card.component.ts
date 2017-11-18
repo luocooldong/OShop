@@ -1,4 +1,4 @@
-import { ShoppingCartComponent } from '../../../shopping-cart/shopping-cart.component';
+import { ShoppingCartComponent } from '../../../shopping/components/shopping-cart/shopping-cart.component';
 import { ShoppingCartService } from '../../services/shopping-cart.service';
 import { Product } from '../../models/product';
 import { Component, Input, OnInit } from '@angular/core';
